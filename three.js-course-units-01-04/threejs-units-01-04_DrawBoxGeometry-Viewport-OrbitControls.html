@@ -28,15 +28,15 @@
 		      	camera.updateProjectionMatrix( );
 	    	} );
 
-		// (#4) Viewport: check when the browser size has changed and adjust the camera accordingly
+		// (#4) Orbital Controls
 			controls = new THREE.OrbitControls( camera, renderer.domElement );
 
 		// (#2) Draw geometry: draw a cube / rectangular box object
 			// create the shape
-			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			var geometry = new THREE.BoxGeometry( 2, 2, 2 );
 
 			// create a material, colour or image texture
-			var material = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe: true } );
+			var material = new THREE.MeshBasicMaterial( { color: 0xff0000, wireframe: true } );
 			var cube = new THREE.Mesh( geometry, material );
 			scene.add( cube );
 			camera.position.z = 4;
